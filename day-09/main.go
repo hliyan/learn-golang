@@ -13,25 +13,25 @@ import "fmt"
 
 // Answer is just a struct used to demonstrate pointers
 type Answer struct {
-  value int
+	value int
 }
 
 func main() {
-  answer := Answer{value: 42}
-  answerAgain := answer
-  answer.value = 43
+	answer := Answer{value: 42}
+	answerAgain := answer
+	answer.value = 43
 
-  fmt.Println("Wihout pointers, things get passed by value")
+	fmt.Println("Wihout pointers, things get passed by value")
 
-  fmt.Println(answer)        // output: {43}
-  fmt.Println(answerAgain)   // output: {42} (surprise, JS and Java folks!)
+	fmt.Println(answer)      // output: {43}
+	fmt.Println(answerAgain) // output: {42} (surprise, JS and Java folks!)
 
-  fmt.Println("You want to pass by reference? Use pointers")
+	fmt.Println("You want to pass by reference? Use pointers")
 
 	pAnswer := &answer
-  answer.value = 44
-  fmt.Println(answer)        // output: {44}
-	fmt.Println(*pAnswer)      // output: {44}   (whew!)
+	answer.value = 44
+	fmt.Println(answer)   // output: {44}
+	fmt.Println(*pAnswer) // output: {44}   (whew!)
 }
 
 /*

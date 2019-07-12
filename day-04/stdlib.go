@@ -11,25 +11,25 @@ $ go run stdlib.go
 package main
 
 import (
-  "fmt"
-	"net/http" 
+	"fmt"
 	"io/ioutil"
+	"net/http"
 )
 
 func main() {
-  var resp, err = http.Get("http://example.com/posts/1")
-  if err != nil {
-    fmt.Println("Unable to get from example.com")
-    return
+	var resp, err = http.Get("http://example.com/posts/1")
+	if err != nil {
+		fmt.Println("Unable to get from example.com")
+		return
 	}
 	defer resp.Body.Close()
 
-  body, err := ioutil.ReadAll(resp.Body)
-  if err != nil {
-    fmt.Println("Unable to read response from example.com")
-    return
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Unable to read response from example.com")
+		return
 	}
-  fmt.Println(string(body))
+	fmt.Println(string(body))
 }
 
 /*

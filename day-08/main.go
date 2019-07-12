@@ -15,19 +15,20 @@ package main
 
 import (
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-  r := gin.Default()
+	r := gin.Default()
 
-  r.GET("/hello/:name", func(c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{
-      "message":  "Hello, " + c.Param("name"),
-    })
-  })
+	r.GET("/hello/:name", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Hello, " + c.Param("name"),
+		})
+	})
 
-  r.Run()
+	r.Run()
 }
 
 /*

@@ -14,27 +14,27 @@ import "fmt"
 
 // define a struct
 type rect struct {
-		width, height int
-		name string
+	width, height int
+	name          string
 }
 
 // define a method named perim() on rect type
 func (r *rect) perim() int {
-    return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
 }
 
 // define another method
 func (r *rect) expand(i int) {
-  r.width *= i
-  r.height *= i
+	r.width *= i
+	r.height *= i
 }
 
 func main() {
 	// use {} notation to instantiate struct
 	var r = rect{
-		width: 20, 
-		height: 5, 
-		name: "bar", // <- yes, that comma is not a typo
+		width:  20,
+		height: 5,
+		name:   "bar", // <- yes, that comma is not a typo
 	}
 
 	fmt.Println("Perimiter:", r.perim())
@@ -48,7 +48,7 @@ EXPLANATION
 - If you want to logically group variables, you need to use structs
 - You can use above notation to define methods on structs
 - Note the named variable instead of the "this" keyword in such methods
-- By default, Go variables are always passed by value (i.e when you pass something 
+- By default, Go variables are always passed by value (i.e when you pass something
 	between functions, you're  passing copies)
 - If you want to reference the original object, you need to pass a pointer (*)
 - TRY: try removing the * from the expand method and see what happens!S

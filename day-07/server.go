@@ -26,8 +26,8 @@ import (
 func main() {
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		type Greeting struct {
-			Text 		string `json:"text"`
-			Error		string `json:"error,omitempty"`
+			Text  string `json:"text"`
+			Error string `json:"error,omitempty"`
 		}
 
 		who := r.URL.Query().Get("who")
