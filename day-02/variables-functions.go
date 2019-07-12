@@ -8,7 +8,7 @@ $ vi variables-functions.go # copy this code here
 $ go run variables-functions.go
 */
 
-package main 
+package main
 
 import "fmt"
 

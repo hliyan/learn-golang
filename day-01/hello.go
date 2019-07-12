@@ -1,6 +1,6 @@
- /*
+/*
 	Day 1: Hello World
-	
+
   https://golang.org/dl/ : download and install golang for your OS
 
 	$ cd your/src/directory
@@ -8,8 +8,8 @@
 	$ cd learning-golang
 	$ vi hello.go            # copy and paste this code
 	$ go run hello.go        # run directly (doesn't create the compiled exec)
- */
- 
+*/
+
 package main
 
 import "fmt"

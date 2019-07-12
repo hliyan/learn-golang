@@ -16,13 +16,13 @@ import "./util"
 import "fmt"
 
 func main() {
-  fact := util.Fact(5)
-  fmt.Println(fact)
+	fact := util.Fact(5)
+	fmt.Println(fact)
 }
 
 /*
 EXPLANATION
-- Think of a package as a collection of functions 
+- Think of a package as a collection of functions
 - A package named "util" must be in a directory named "util"
 - Package names are lowercase
 - Go has no public/private keyword, instead:
