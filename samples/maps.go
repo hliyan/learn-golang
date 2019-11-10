@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
-	ages := map[string] int {
-		"John": 30,
+	ages := map[string]int{
+		"John":  30,
 		"James": 31,
 	}
 

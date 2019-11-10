@@ -16,8 +16,7 @@ func test() (int, error) {
 }
 
 func main() {
-	_, err := test()
-	if err != nil {
+	if _, err := test(); err != nil {
 		fmt.Println(err)
 	}
 }
